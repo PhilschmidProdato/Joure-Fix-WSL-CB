@@ -1,0 +1,23 @@
+version: "3"
+services:
+  cb-node1:
+    container_name: cb-node1
+    image: couchbase
+    volumes:
+      - "./couchbase/node1:/opt/couchbase/var"
+    ports:
+      - 8091:8091
+      - 8092:8092
+      - 8093:8093
+      - 8094:8094
+      - 11210:11210
+  cb-node2:
+    container_name: cb-node2
+    image: couchbase
+    volumes:
+      - "~/couchbase/node2:/opt/couchbase/var"
+  cb-node3:
+    container_name: cb-node3
+    image: couchbase
+    volumes:
+      - "~/couchbase/node3:/opt/couchbase/var"
